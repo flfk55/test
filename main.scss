@@ -1,0 +1,15 @@
+@mixin left-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @content;
+}
+
+.box {
+  @include left-top {
+    bottom: 0;
+    right: 0;
+    top: 10px;
+    margin: auto;
+  }
+}
